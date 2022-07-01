@@ -8,6 +8,7 @@ class AspectjApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("기본");
 	}
 
 }

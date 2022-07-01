@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import x.y.aspectj.ui.Printer;
 
 @Data
@@ -13,10 +14,8 @@ public class Person {
     private String major;
     private ArrayList<ExamScore> examScores;
 
+    @Autowired
     private Printer printer;
-    public Person(Printer printer) {
-        this.printer = printer;
-    }
 
     public void print() {
         var message = "[name: " + name + ", major: " + major + ", examScores: " + examScores + "]";

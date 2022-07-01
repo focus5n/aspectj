@@ -1,10 +1,5 @@
 package x.y.aspectj.ui;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
-@Data
-@RequiredArgsConstructor
 public class PrinterProxy implements Printer {
 
     public PrinterProxy(Printer printer) {}
