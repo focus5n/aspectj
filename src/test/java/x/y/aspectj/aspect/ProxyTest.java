@@ -11,7 +11,7 @@ class ProxyTest {
     @DisplayName("ProxyPattern 수동으로 만들기")
     void ProxyPatternTest() {
         var printer = new PrinterProxy(new PrinterColor());
-        printer.print("Hello, my printer!");
+        printer.print("Hello, my printer!!");
     }
 
 }
