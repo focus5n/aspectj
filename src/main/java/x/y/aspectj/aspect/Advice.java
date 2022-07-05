@@ -27,15 +27,15 @@ public class Advice {
     }
 
     @Around(target)
-    public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        var signature = joinPoint.getSignature().toLongString();
+    public Object logAround(ProceedingJoinPoint proceedingJoingPoint) throws Throwable {
+        var signature = proceedingJoingPoint.getSignature().toLongString();
         var time = new Date().getTime();
 
         System.out.println("### STEP2 : <aop:around> = 메서드 호출 이전, 이후, 예외 발생 등 모든 시점에 적용 가능한 어드바이스 정의");
         System.out.println("### STEP2 : " + signature + " around 시작.");
 
         try {
-            return joinPoint.proceed();
+            return proceedingJoingPoint.proceed();
         } finally {
             System.out.printf("실행시간: %dms %n", new Date().getTime() - time);
         }
